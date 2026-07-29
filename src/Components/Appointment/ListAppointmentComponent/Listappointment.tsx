@@ -145,7 +145,7 @@ export default function Listappointment() {
 
         status: item.status,
 
-        // NEW
+        
         paymentStatus: item.paymentStatus,
 
         appointmentType: item.appointmentType,
