@@ -57,41 +57,34 @@ interface AppointmentApi {
 
   updatedDate: string;
 }
-
 interface AppointmentTable {
   key: number;
 
   appointmentId: number;
-
   companyId: number;
 
   doctorId: number;
-
   doctorName: string;
 
   patientId: number;
-
   patientName: string;
 
   date: string;
-
   meetingLink: string;
 
   status: string;
-
-  paymentStatus?: string;
-
   note: string;
 
   appointmentType: string;
-
   tokenNumber: number;
-
   consultationFee: number;
 
-  createdDate: string;
+  paymentStatus?: string;
 
+  createdDate: string;
   updatedDate: string;
+
+  fullData?: any;
 }
 
 export default function Listappointment() {

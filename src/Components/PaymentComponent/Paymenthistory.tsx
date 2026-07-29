@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import {
   Avatar,
-  Card,
   Tag,
   message,
 } from "antd";
