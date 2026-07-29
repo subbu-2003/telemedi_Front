@@ -41,7 +41,7 @@ import Doctorlist from "./Components/Doctor/DoctorListComponent/Doctorlist";
 import Createappointment from "./Components/Appointment/CreateAppointmentComponent/Createappointment";
 
 import Listappointment from "./Components/Appointment/ListAppointmentComponent/Listappointment";
-import PaymentHistory from "./Components/PaymentComponent/Paymenthistory";
+import Paymenthistory from "./Components/PaymentComponent/Paymenthistory";
 
 export default function App() {
   return (
@@ -149,7 +149,7 @@ export default function App() {
             <Route
           path="payment"
           element={
-            <PaymentHistory />
+            <Paymenthistory />
           }
         />
         

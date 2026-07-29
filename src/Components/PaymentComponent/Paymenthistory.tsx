@@ -38,7 +38,7 @@ interface PaymentTable {
   capturedAt: string;
 }
 
-export default function PaymentHistory() {
+export default function Paymenthistory() {
   const [data, setData] = useState<PaymentTable[]>([]);
   const [loading, setLoading] = useState(false);
 
