@@ -10,7 +10,7 @@ import { UserOutlined } from "@ant-design/icons";
 
 import type { ColumnsType } from "antd/es/table";
 
-import "./PaymentHistory.css";
+import "./Paymenthistory.css";
 import api from "../../api/axios";
 import DataTable from "../../Utils/DataTable";
 
