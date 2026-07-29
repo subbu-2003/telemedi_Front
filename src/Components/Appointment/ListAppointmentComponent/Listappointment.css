@@ -1,0 +1,129 @@
+.appointment-list-page {
+  padding: 16px;
+}
+
+/* Appointment ID */
+
+.appointment-id {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4f6ef7;
+}
+
+/* Normal Table Text */
+
+.table-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Fee */
+
+.fee-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #059669;
+}
+
+/* Ant Table */
+
+.ant-table-wrapper {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.ant-table {
+  font-size: 13px;
+}
+
+.ant-table-thead > tr > th {
+  background: #f8fafc !important;
+  color: #374151 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+.ant-table-tbody > tr > td {
+  font-size: 13px;
+  color: #374151;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #f5f7ff !important;
+}
+
+/* Dropdown */
+
+.ant-dropdown-menu-item {
+  font-size: 13px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .appointment-list-page {
+    padding: 10px;
+  }
+
+  .appointment-id,
+  .table-text,
+  .fee-text {
+    font-size: 12px;
+  }
+}
+
+.appointment-list-page {
+  padding: 20px;
+}
+
+/* APPOINTMENT ID */
+
+.appointment-id {
+  font-weight: 600;
+  color: #4f6ef7;
+}
+
+/* MEETING LINK */
+
+.meeting-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #4f6ef7;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.meeting-link:hover {
+  color: #3151e0;
+}
+
+/* GENERATE BUTTON */
+
+.generate-btn {
+  border-radius: 10px;
+  height: 38px;
+  font-weight: 600;
+  padding-inline: 18px;
+  background: linear-gradient(
+    135deg,
+    #4f6ef7,
+    #6c63ff
+  );
+
+  border: none;
+  box-shadow: 0 8px 18px
+    rgba(79, 110, 247, 0.25);
+}
+
+.generate-btn:hover {
+  opacity: 0.95;
+}
+
+/* FEE */
+
+.fee-text {
+  font-weight: 600;
+  color: #111827;
+}

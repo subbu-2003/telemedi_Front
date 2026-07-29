@@ -1,0 +1,276 @@
+.prescription-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.prescription-container {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+}
+
+/* HEADER */
+
+.prescription-header {
+  padding: 22px 28px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.prescription-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.prescription-header p {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* FORM */
+
+.prescription-form {
+  padding: 25px 28px 35px;
+}
+
+/* SECTION */
+
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.section h2 span {
+  color: red;
+}
+
+/* PATIENT */
+
+.patient-section {
+  width: 50%;
+}
+
+.patient-select {
+  width: 100%;
+}
+
+.patient-select .ant-select-selector {
+  height: 40px !important;
+  border-radius: 8px !important;
+  border: 1px solid #d1d5db !important;
+  display: flex;
+  align-items: center;
+  padding: 0 12px !important;
+  box-shadow: none !important;
+}
+
+.patient-select
+  .ant-select-selection-item,
+.patient-select
+  .ant-select-selection-placeholder {
+  line-height: 38px !important;
+  font-size: 13px !important;
+}
+
+/* HEADER */
+
+.prescription-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+/* INPUT */
+
+.point-input-box {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #fff;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  transition: 0.3s;
+}
+
+.point-input-box:focus-within {
+  border-color: #4f6ef7;
+  box-shadow: 0 0 0 2px
+    rgba(79, 110, 247, 0.1);
+}
+
+.point-input-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  background: transparent;
+}
+
+/* ADD BUTTON */
+
+.add-point-btn {
+  height: 36px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 8px;
+  background: #4f6ef7;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  transition: 0.3s;
+}
+
+.add-point-btn:hover {
+  background: #3558f5;
+}
+
+/* POINTS */
+
+.points-wrapper {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.point-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fafbff;
+  padding: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.point-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.point-number {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #4f6ef7;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.point-left p {
+  margin: 0;
+  font-size: 13px;
+  color: #374151;
+}
+
+/* REMOVE */
+
+.remove-btn {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 8px;
+  background: #fff1f2;
+  color: #ef4444;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s;
+}
+
+.remove-btn:hover {
+  background: #ffe4e6;
+}
+
+/* NOTES */
+
+.section textarea {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 13px;
+  resize: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+.section textarea:focus {
+  border-color: #4f6ef7;
+  box-shadow: 0 0 0 2px
+    rgba(79, 110, 247, 0.1);
+}
+
+/* SAVE */
+
+.save-section {
+  margin-top: 34px;
+}
+
+.save-btn {
+  height: 42px;
+  padding: 0 26px;
+  border: none;
+  border-radius: 8px;
+  background: #4f6ef7;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background: #3558f5;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .patient-section {
+    width: 100%;
+  }
+
+  .prescription-header,
+  .prescription-form {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .prescription-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .prescription-header h1 {
+    font-size: 20px;
+  }
+}

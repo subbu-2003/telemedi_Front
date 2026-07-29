@@ -1,0 +1,247 @@
+.dashboard-page {
+  padding: 24px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+/* HEADER */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.dashboard-header p {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* BUTTON */
+
+.add-btn {
+  height: 42px;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* CARD */
+
+.dashboard-card {
+  border-radius: 16px !important;
+  border: none !important;
+  box-shadow: 0 4px 14px
+    rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-card
+  .ant-card-body {
+  padding: 22px;
+}
+
+/* STATS */
+
+.stats-card {
+  overflow: hidden;
+  position: relative;
+}
+
+.stats-card::before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.patients-card::before {
+  background: #1677ff;
+}
+
+.doctors-card::before {
+  background: #52c41a;
+}
+
+.prescription-card::before {
+  background: #fa8c16;
+}
+
+.appointment-card::before {
+  background: #722ed1;
+}
+
+/* ANT STATISTIC */
+
+.ant-statistic {
+  position: relative;
+  z-index: 2;
+}
+
+.ant-statistic-title {
+  font-size: 14px !important;
+  color: #6b7280 !important;
+  margin-bottom: 12px !important;
+}
+
+.ant-statistic-content {
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
+}
+
+/* CHART */
+
+.chart-section {
+  margin-top: 24px;
+}
+
+/* TABLE */
+
+.table-section {
+  margin-top: 24px;
+}
+
+.common-table
+  .ant-table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.common-table
+  .ant-table-thead
+  > tr
+  > th {
+  background: #f8fafc !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #374151 !important;
+  padding: 14px !important;
+}
+
+.common-table
+  .ant-table-tbody
+  > tr
+  > td {
+  padding: 14px !important;
+  font-size: 13px;
+  color: #374151;
+}
+
+/* PATIENT */
+
+.patient-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.patient-info h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* PHONE */
+
+.phone-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #374151;
+}
+
+/* DATE */
+
+.date-text {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* DOCTORS */
+
+.doctors-table-card {
+  margin-top: 24px;
+}
+
+.doctor-card {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid #eef2f7;
+}
+
+.doctor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px
+    rgba(0, 0, 0, 0.06);
+}
+
+.doctor-card h3 {
+  margin-top: 14px;
+  margin-bottom: 4px;
+  font-size: 16px;
+  color: #111827;
+}
+
+.doctor-status {
+  margin-top: 12px;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+}
+
+/* LOADER */
+
+.dashboard-loader {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 16px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+
+  .dashboard-card
+    .ant-card-body {
+    padding: 16px;
+  }
+
+  .ant-statistic-content {
+    font-size: 24px !important;
+  }
+}

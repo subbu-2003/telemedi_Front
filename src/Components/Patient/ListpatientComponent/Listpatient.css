@@ -1,0 +1,120 @@
+.patient-list-page {
+  padding: 18px;
+}
+
+/* PATIENT USER */
+
+.patient-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.patient-avatar {
+  background: #eef2ff;
+  color: #4f6ef7;
+}
+
+.patient-user h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.patient-user p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* TABLE INFO */
+
+.table-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #374151;
+  font-size: 13px;
+}
+
+.department-text {
+  font-size: 13px;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* TAGS */
+
+.gender-tag {
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.blood-tag {
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-tag {
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ACTION BUTTON */
+
+.action-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.action-btn:hover {
+  background: #f3f4f6;
+}
+
+/* TABLE FONT */
+
+.ant-table {
+  font-size: 13px;
+}
+
+.ant-table-thead > tr > th {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #374151 !important;
+  background: #f9fafb !important;
+}
+
+.ant-table-tbody > tr > td {
+  font-size: 13px;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .patient-list-page {
+    padding: 10px;
+  }
+
+  .patient-user h4 {
+    font-size: 13px;
+  }
+
+  .patient-user p {
+    font-size: 11px;
+  }
+
+  .table-info {
+    font-size: 12px;
+  }
+}

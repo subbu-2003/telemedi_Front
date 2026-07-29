@@ -1,0 +1,410 @@
+.meeting-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+  padding: 20px;
+}
+
+.meeting-container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 10px 30px
+    rgba(0, 0, 0, 0.06);
+}
+
+/* TOP */
+
+.meeting-icon-box {
+  width: 65px;
+  height: 65px;
+  margin: auto;
+  border-radius: 18px;
+  background: #eff6ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meeting-icon {
+  font-size: 30px;
+  color: #2563eb;
+}
+
+.meeting-header {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.meeting-header h1 {
+  font-size: 28px;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.meeting-header p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* BUTTON */
+
+.generate-btn {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 24px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.generate-btn:hover {
+  background: #1d4ed8;
+}
+
+/* CARD */
+
+.meeting-card {
+  margin-top: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 22px;
+  background: #fafcff;
+}
+
+.meeting-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meeting-card-header h2 {
+  font-size: 20px;
+  margin-bottom: 4px;
+  color: #111827;
+}
+
+.meeting-card-header p {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.success-icon {
+  font-size: 26px;
+  color: #22c55e;
+}
+
+/* ROOM */
+
+.room-id-box {
+  margin-top: 18px;
+  background: #eff6ff;
+  padding: 14px;
+  border-radius: 12px;
+}
+
+.room-id-box span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.room-id-box p {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+/* LINK */
+
+.link-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.link-box input {
+  flex: 1;
+  height: 44px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 0 14px;
+  font-size: 13px;
+}
+
+.link-box button {
+  width: 48px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ACTIONS */
+
+.meeting-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.join-btn {
+  flex: 1;
+  height: 46px;
+  border: none;
+  border-radius: 12px;
+  background: #16a34a;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.share-btn {
+  width: 140px;
+  height: 46px;
+  border: none;
+  border-radius: 12px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* POPUP */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+.popup-container {
+  width: 95%;
+  max-width: 700px;
+
+  background: white;
+  border-radius: 22px;
+
+  padding: 22px;
+}
+
+/* HEADER */
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #111827;
+}
+
+.close-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: #f3f4f6;
+  cursor: pointer;
+}
+
+/* SEARCH */
+
+.search-box {
+  margin-top: 20px;
+  height: 46px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+
+  padding: 0 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+}
+
+/* PATIENTS */
+
+.patient-list {
+  margin-top: 20px;
+
+  max-height: 420px;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.patient-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.patient-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* CARD */
+
+.patient-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  padding: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.3s;
+}
+
+.patient-card:hover {
+  border-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.patient-left {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.patient-avatar {
+  width: 56px;
+  height: 56px;
+
+  border-radius: 16px;
+
+  background: #2563eb;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.patient-details h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #111827;
+}
+
+.patient-details p {
+  margin: 3px 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ICONS */
+
+.patient-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 12px;
+
+  color: white;
+  cursor: pointer;
+
+  font-size: 18px;
+}
+
+.icon-btn.whatsapp {
+  background: #22c55e;
+}
+
+.icon-btn.email {
+  background: #2563eb;
+}
+
+/* LOADING */
+
+.loading-box,
+.empty-box {
+  padding: 40px;
+  text-align: center;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .meeting-page {
+    padding: 12px;
+  }
+
+  .meeting-container {
+    padding: 18px;
+  }
+
+  .meeting-actions {
+    flex-direction: column;
+  }
+
+  .share-btn {
+    width: 100%;
+  }
+
+  .patient-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .patient-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

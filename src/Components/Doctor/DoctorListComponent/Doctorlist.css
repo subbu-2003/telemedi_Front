@@ -1,0 +1,86 @@
+.doctor-list-page {
+  padding: 16px;
+}
+
+/* Doctor Info */
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.doctor-info h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.doctor-info p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Doctor ID */
+
+.doctor-id {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4f6ef7;
+}
+
+/* Table Text */
+
+.table-text {
+  font-size: 13px;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Ant Design Table */
+
+.ant-table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ant-table-thead > tr > th {
+  background: #f8fafc !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #374151 !important;
+}
+
+.ant-table-tbody > tr > td {
+  font-size: 13px;
+  color: #374151;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+
+/* Tags */
+
+.ant-tag {
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .doctor-list-page {
+    padding: 10px;
+  }
+
+  .doctor-info h4 {
+    font-size: 13px;
+  }
+
+  .doctor-info p {
+    font-size: 11px;
+  }
+}
