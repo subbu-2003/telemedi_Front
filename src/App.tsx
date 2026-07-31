@@ -42,6 +42,7 @@ import Createappointment from "./Components/Appointment/CreateAppointmentCompone
 
 import Listappointment from "./Components/Appointment/ListAppointmentComponent/Listappointment";
 import Paymenthistory from "./Components/PaymentComponent/Paymenthistory";
+import TermsandConditions from "./Components/TermsComponent/TermsandConditions";
 
 export default function App() {
   return (
@@ -59,6 +60,14 @@ export default function App() {
             <VideoStream />
           }
         />
+
+          <Route
+          path="terms"
+          element={
+            <TermsandConditions />
+          }
+        />
+
 
     
 

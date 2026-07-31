@@ -1104,7 +1104,7 @@ const handleLogin = async () => {
               </span>
 
               <a
-                href="/privacy"
+                href="/terms"
                 className="login-link"
               >
                 Privacy Policy
