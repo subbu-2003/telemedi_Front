@@ -478,7 +478,14 @@ const getRowMenuItems = (
         }
       },
     },
-    {
+    
+
+  ];
+
+  // Show Edit and Delete only for ADMIN
+  if (userType === "ADMIN") {
+    menuItems.push(
+      {
   key: "pay",
   label: "Pay",
   icon: <DollarOutlined />,
@@ -487,7 +494,8 @@ const getRowMenuItems = (
     createRazorpayOrder(record);
   },
 },
-{
+
+      {
   key: "paymentLink",
   label: "Generate Payment Link",
   icon: <LinkOutlined />,
@@ -496,11 +504,6 @@ const getRowMenuItems = (
     generatePaymentLink(record);
   },
 },
-  ];
-
-  // Show Edit and Delete only for ADMIN
-  if (userType === "ADMIN") {
-    menuItems.push(
       {
         key: "edit",
         label: "Edit",

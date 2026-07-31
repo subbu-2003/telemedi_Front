@@ -296,7 +296,7 @@ export default function Sidebar({
 
         <div className="support-content">
           <span>Support Number</span>
-          <p>07969223344</p>
+          <p>9344723010</p>
         </div>
       </div>
 
