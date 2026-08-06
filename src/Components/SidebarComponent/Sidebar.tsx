@@ -264,12 +264,22 @@ icon={<ClipboardList size={18} />}
             ]}
           />
 
-          {userType === "ADMIN" && (
+{/* Payment History */}
+{userType === "ADMIN" && (
   <SidebarItem
-    to="/payment"
-   icon={<IndianRupee size={18} />}
+    icon={<IndianRupee size={18} />}
     label="Payment History"
     collapsed={isMobile ? false : collapsed}
+    children={[
+      {
+        label: "Online Payment",
+        to: "/payment",
+      },
+      {
+        label: "Cash Payment",
+        to: "/cashpayment",
+      },
+    ]}
   />
 )}
 

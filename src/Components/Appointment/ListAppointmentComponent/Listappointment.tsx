@@ -5,6 +5,7 @@ import {
   Dropdown,
   Space,
   Tag,
+  Tooltip,
   Select,
   message,
 } from "antd";
@@ -14,6 +15,9 @@ import { useNavigate } from "react-router-dom";
 import {
   MoreOutlined,
   VideoCameraOutlined,
+  CopyOutlined,
+  WhatsAppOutlined,
+  WalletOutlined,
   LinkOutlined,
   EditOutlined,
   DeleteOutlined,
@@ -165,6 +169,40 @@ export default function Listappointment() {
   }
 };
 
+const handleCashPayment = async (
+  record: AppointmentTable
+) => {
+  try {
+    // 1. Save Cash Payment
+    await api.post("/Paymentcash", {
+      companyId: record.companyId,
+      patientId: record.patientId,
+      appointmentId: record.appointmentId,
+      amount: record.consultationFee,
+      currency: "INR",
+      status: "CAPTURED",
+      capturedAt: new Date().toISOString(),
+      createdAt: new Date().toISOString(),
+    });
+
+    // 2. Update Appointment Payment Status
+    await api.put("/Appointment/UpdatePaymentStatus", {
+      appointmentId: record.appointmentId,
+      companyId: record.companyId,
+      paymentStatus: "Paid Cash",
+    });
+
+    // 3. Success Message
+    message.success("Cash payment received successfully.");
+
+    // 4. Reload Appointment List
+    fetchAppointments();
+  } catch (error) {
+    console.error(error);
+    message.error("Cash payment failed.");
+  }
+};
+
 const createRazorpayOrder = async (record: AppointmentTable) => {
   try {
     const payload = {
@@ -214,7 +252,7 @@ const createRazorpayOrder = async (record: AppointmentTable) => {
       await api.put("/Appointment/UpdatePaymentStatus", {
         appointmentId: record.appointmentId,
         companyId: record.companyId,
-        paymentStatus: "Paid",
+        paymentStatus: "Paid Online",
       });
 
       message.success("Payment Successful");
@@ -495,6 +533,16 @@ const getRowMenuItems = (
   },
 },
 
+{
+      key: "payCash",
+      label: "Pay Cash",
+      icon: <WalletOutlined />, // or MoneyCollectOutlined
+      disabled: record.paymentStatus === "Paid",
+      onClick: () => {
+        handleCashPayment(record);
+      },
+    },
+
       {
   key: "paymentLink",
   label: "Generate Payment Link",
@@ -566,31 +614,70 @@ const getRowMenuItems = (
 
       // ================= KEEP JOIN COLUMN =================
 
-      {
-        title: "Join Meeting",
+     {
+  title: "Meeting",
+  dataIndex: "meetingLink",
 
-        dataIndex:
-          "meetingLink",
+  render: (meetingLink: string) =>
+    meetingLink ? (
+      <Space size="middle">
 
-        render: (
-          meetingLink: string
-        ) =>
-          meetingLink ? (
-            <a
-              href={meetingLink}
-              target="_blank"
-              rel="noreferrer"
-              className="meeting-link"
-            >
-              <VideoCameraOutlined />
-              Join Meeting
-            </a>
-          ) : (
-            <Tag color="default">
-              No Meeting
-            </Tag>
-          ),
-      },
+        {/* Join */}
+        <Tooltip title="Join Meeting">
+          <a
+            href={meetingLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <VideoCameraOutlined
+              style={{
+                fontSize: 18,
+                color: "#1677ff",
+                cursor: "pointer",
+              }}
+            />
+          </a>
+        </Tooltip>
+
+        {/* Copy */}
+        <Tooltip title="Copy Link">
+          <CopyOutlined
+            style={{
+              fontSize: 18,
+              color: "#722ed1",
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              navigator.clipboard.writeText(meetingLink);
+              message.success("Meeting link copied!");
+            }}
+          />
+        </Tooltip>
+
+        {/* WhatsApp */}
+        <Tooltip title="Share via WhatsApp">
+          <a
+            href={`https://wa.me/?text=${encodeURIComponent(
+              `Join Meeting:\n${meetingLink}`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <WhatsAppOutlined
+              style={{
+                fontSize: 18,
+                color: "#25D366",
+                cursor: "pointer",
+              }}
+            />
+          </a>
+        </Tooltip>
+
+      </Space>
+    ) : (
+      <Tag color="default">No Meeting</Tag>
+    ),
+},
 
       {
   title: "Payment Status",

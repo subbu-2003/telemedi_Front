@@ -1,0 +1,20 @@
+.payment-page {
+  padding: 20px;
+}
+
+.payment-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.payment-user h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ant-tag {
+  border-radius: 20px;
+  padding: 4px 12px;
+}
