@@ -3,14 +3,15 @@ import { NavLink, useLocation } from "react-router-dom";
 import {
   LayoutDashboard,
   Users,
+  CalendarClock,
   ChevronRight,
   ChevronDown,
   Phone,
-  Receipt,
+  IndianRupee,
   MessageCircle,
+  ClipboardList,
   Stethoscope,
   Video,
-  UserRoundCog,
 } from "lucide-react";
 import React from "react";
 
@@ -174,7 +175,7 @@ export default function Sidebar({
 
       {(userType === "ADMIN" || userType === "DOCTOR") && (
   <SidebarItem
-    icon={<UserRoundCog size={18} />}
+    icon={<CalendarClock size={18} />}
     label="Appointment"
     collapsed={isMobile ? false : collapsed}
     children={
@@ -201,7 +202,7 @@ export default function Sidebar({
 
        {userType === "ADMIN" && (
   <SidebarItem
-    icon={<UserRoundCog size={18} />}
+    icon={<Stethoscope size={18} />}
     label="Doctor"
     collapsed={isMobile ? false : collapsed}
     children={[
@@ -247,7 +248,8 @@ export default function Sidebar({
 
           {/* E-Prescription */}
           <SidebarItem
-            icon={<Stethoscope size={18} />}
+           
+icon={<ClipboardList size={18} />}
             label="E-Prescription"
             collapsed={isMobile ? false : collapsed}
             children={[
@@ -265,7 +267,7 @@ export default function Sidebar({
           {userType === "ADMIN" && (
   <SidebarItem
     to="/payment"
-    icon={<Receipt size={18} />}
+   icon={<IndianRupee size={18} />}
     label="Payment History"
     collapsed={isMobile ? false : collapsed}
   />
