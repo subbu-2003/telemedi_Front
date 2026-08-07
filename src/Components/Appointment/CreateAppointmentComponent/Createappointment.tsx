@@ -14,6 +14,7 @@ import {
   VideoCameraOutlined,
   EyeOutlined,
   PlusOutlined,
+  CopyOutlined,
 } from "@ant-design/icons";
 
 import {
@@ -435,6 +436,27 @@ const savePatient = async (
       );
     };
 
+  // COPY MEETING LINK
+  const copyMeetingLink = async () => {
+    if (!formData.meetingLink) return;
+
+    try {
+      await navigator.clipboard.writeText(
+        formData.meetingLink
+      );
+
+      message.success(
+        "Meeting link copied"
+      );
+    } catch (error) {
+      console.log(error);
+
+      message.error(
+        "Failed to copy link"
+      );
+    }
+  };
+
   // JOIN MEETING
   const openMeeting = () => {
     window.open(
@@ -732,7 +754,7 @@ setDoctorModalOpen(true)
             </div>
 
             {/* MEETING LINK */}
-            <div className="form-group">
+            <div className="form-group full-width">
 
               <label>
                 Meeting Link
@@ -751,16 +773,29 @@ setDoctorModalOpen(true)
                   }
                 />
 
-                <button
-                  type="button"
-                  className="meeting-btn"
-                  onClick={
-                    generateMeeting
-                  }
-                >
-                  <VideoCameraOutlined />
-                  Generate
-                </button>
+                {formData.meetingLink ? (
+                  <button
+                    type="button"
+                    className="meeting-btn"
+                    onClick={
+                      copyMeetingLink
+                    }
+                  >
+                    <CopyOutlined />
+                    Copy
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    className="meeting-btn"
+                    onClick={
+                      generateMeeting
+                    }
+                  >
+                    <VideoCameraOutlined />
+                    Generate
+                  </button>
+                )}
 
                 {formData.meetingLink && (
                   <button
@@ -771,7 +806,7 @@ setDoctorModalOpen(true)
                     }
                   >
                     <EyeOutlined />
-                    Join
+                    Join Now
                   </button>
                 )}
 
@@ -1374,6 +1409,8 @@ disabled={doctorLoading}
 
   </form>
 </Modal>
+
+
       </div>
     </div>
   );

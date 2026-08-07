@@ -44,6 +44,7 @@ import Listappointment from "./Components/Appointment/ListAppointmentComponent/L
 import Paymenthistory from "./Components/PaymentComponent/Paymenthistory";
 import TermsandConditions from "./Components/TermsComponent/TermsandConditions";
 import PaymentCashComponent from "./Components/PaymentCaseComponent/PaymentCashComponent";
+import Report from "./Components/ReportComponent/Report";
 
 export default function App() {
   return (
@@ -168,6 +169,15 @@ export default function App() {
   path="/cashpayment"
   element={<PaymentCashComponent />}
 />
+
+
+
+
+        <Route
+  path="/report"
+  element={<Report />}
+/>
+
 
         <Route
           path="meeting"

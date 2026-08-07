@@ -14,12 +14,16 @@
     "@vitejs/plugin-basic-ssl": "^2.3.0",
     "antd": "^6.3.4",
     "axios": "^1.16.1",
+    "dayjs": "^1.11.21",
     "face-api.js": "^0.22.2",
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.8",
     "lucide-react": "^1.7.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.13.2",
-    "recharts": "^2.15.0"
+    "recharts": "^2.15.0",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",

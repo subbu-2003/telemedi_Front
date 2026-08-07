@@ -226,6 +226,7 @@
 }
 
 .join-btn {
+   flex: none;   
   background: #10b981;
 }
 

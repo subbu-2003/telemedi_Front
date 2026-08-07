@@ -185,12 +185,20 @@ const handleCashPayment = async (
       createdAt: new Date().toISOString(),
     });
 
-    // 2. Update Appointment Payment Status
-    await api.put("/Appointment/UpdatePaymentStatus", {
-      appointmentId: record.appointmentId,
-      companyId: record.companyId,
-      paymentStatus: "Paid Cash",
-    });
+    console.log("Record:", record);
+
+const updatePayload = {
+  appointmentId: record.appointmentId,
+  companyId: record.companyId,
+  paymentStatus: "Paid Cash",
+};
+
+console.log("Update Payload:", updatePayload);
+
+await api.put(
+  "/Appointment/UpdatePaymentStatus",
+  updatePayload
+);
 
     // 3. Success Message
     message.success("Cash payment received successfully.");
@@ -522,22 +530,24 @@ const getRowMenuItems = (
 
   // Show Edit and Delete only for ADMIN
   if (userType === "ADMIN") {
-    menuItems.push(
-      {
-  key: "pay",
-  label: "Pay",
-  icon: <DollarOutlined />,
-  disabled: record.paymentStatus === "Paid",
-  onClick: () => {
-    createRazorpayOrder(record);
+  menuItems.push({
+    key: "pay",
+    label: "Pay",
+    icon: <DollarOutlined />,
+    disabled:
+      record.paymentStatus === "Paid Online" ||
+      record.paymentStatus === "Paid Cash",
+    onClick: () => {
+      createRazorpayOrder(record);
+    },
   },
-},
-
 {
       key: "payCash",
       label: "Pay Cash",
       icon: <WalletOutlined />, // or MoneyCollectOutlined
-      disabled: record.paymentStatus === "Paid",
+        disabled:
+      record.paymentStatus === "Paid Online" ||
+      record.paymentStatus === "Paid Cash",
       onClick: () => {
         handleCashPayment(record);
       },
@@ -844,7 +854,7 @@ const getRowMenuItems = (
           <Space>
            {userType === "ADMIN" && (
   <AddButton
-    label="Add Appointment"
+    label=" + Add Appointment"
     onClick={() => navigate("/createappointment")}
   />
 )}

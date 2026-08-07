@@ -10,6 +10,7 @@ import {
   IndianRupee,
   MessageCircle,
   ClipboardList,
+  FileBarChart2,
   Stethoscope,
   Video,
 } from "lucide-react";
@@ -199,50 +200,23 @@ export default function Sidebar({
     }
   />
 )}
-
-       {userType === "ADMIN" && (
+{/* Doctor */}
+{userType === "ADMIN" && (
   <SidebarItem
+    to="/doctorlist"
     icon={<Stethoscope size={18} />}
     label="Doctor"
     collapsed={isMobile ? false : collapsed}
-    children={[
-      {
-        label: "Create Doctor",
-        to: "/createdoctor",
-      },
-      {
-        label: "List Doctor",
-        to: "/doctorlist",
-      },
-    ]}
   />
 )}
 
-          {/* Patient */}
+     {/* Patient */}
 {(userType === "ADMIN" || userType === "DOCTOR") && (
   <SidebarItem
+    to="/patientlist"
     icon={<Users size={18} />}
     label="Patient"
     collapsed={isMobile ? false : collapsed}
-    children={
-      userType === "ADMIN"
-        ? [
-            {
-              label: "Create Patient",
-              to: "/createpatient",
-            },
-            {
-              label: "List Patient",
-              to: "/patientlist",
-            },
-          ]
-        : [
-            {
-              label: "List Patient",
-              to: "/patientlist",
-            },
-          ]
-    }
   />
 )}
 
@@ -288,6 +262,16 @@ icon={<ClipboardList size={18} />}
     to="/meeting"
     icon={<Video size={18} />}
     label="Meeting"
+    collapsed={isMobile ? false : collapsed}
+  />
+)}
+
+{/* Report */}
+{userType === "ADMIN" && (
+  <SidebarItem
+    to="/report"
+    icon={<FileBarChart2 size={18} />}
+    label="Report"
     collapsed={isMobile ? false : collapsed}
   />
 )}

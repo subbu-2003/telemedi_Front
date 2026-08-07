@@ -1,0 +1,50 @@
+.report-page {
+  padding: 20px;
+}
+
+.report-filter-bar {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: #fff;
+  padding: 16px 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-item label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+}
+
+.filter-actions {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.report-table-wrapper {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.report-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.report-user span {
+  font-weight: 500;
+}
